@@ -5,6 +5,9 @@ import App from './App.jsx'
 import React from 'react'
 import './index.css' // 👈 Importás el CSS con Tailwind
 
+// CORRER
+// npm run dev
+
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <App />

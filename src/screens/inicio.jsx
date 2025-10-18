@@ -1,10 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import "../styles/inicio.css";
+import { FadeLoader } from "react-spinners";
 
 export default function Inicio() {
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [menuOpen, setMenuOpen] = useState(false); // State for menu
+  const menuRef = useRef(null); // Ref for the menu
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -25,19 +28,52 @@ export default function Inicio() {
       });
   }, []);
 
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (menuRef.current && !menuRef.current.contains(event.target)) {
+        setMenuOpen(false);
+      }
+    };
+
+    if (menuOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+    } else {
+      document.removeEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [menuOpen]);
+
   if (loading) {
-    return <p className="loading-text">Cargando...</p>;
+    return (
+      <p className="loading-text">
+        <FadeLoader
+          className="loaders-css"
+          color="#118799"
+          height={19}
+          speedMultiplier={0.6}
+          width={5}
+        />
+      </p>
+    );
   }
 
   return (
     <div className="container">
       {/* Header */}
       <header className="header">
-        <div className="menu-icon">&#9776;</div>
+        <div
+          className="menu-icon"
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
+          &#9776;
+        </div>
         <div className="header-text-container">
           <h1 className="header-title">E.P.E.T N° 12</h1>
           <p className="header-subtitle">
-            Blog de informaciones sobre el colegio
+            App de comunicaciones de la institución
           </p>
         </div>
         <img
@@ -46,6 +82,26 @@ export default function Inicio() {
           className="logo"
         />
       </header>
+
+      {/* Menu */}
+      {menuOpen && (
+        <nav className="menu" ref={menuRef}>
+          <ul>
+            <li onClick={() => navigate("/novedades")}>NOVEDADES</li>
+            <li onClick={() => navigate("/horarios-de-clases")}>HORARIOS DE CLASES</li>
+            <li onClick={() => navigate("/clases-de-consultas")}>CLASES DE CONSULTAS</li>
+            <li onClick={() => navigate("/programas")}>PROGRAMAS</li>
+            <li onClick={() => navigate("/correlatividades")}>CORRELATIVIDADES</li>
+            <li onClick={() => navigate("/mesas-de-examen")}>MESAS DE EXAMEN</li>
+            <li onClick={() => navigate("/calendario")}>CALENDARIO</li>
+            <li onClick={() => navigate("/planillas")}>PLANILLAS</li>
+            <li onClick={() => navigate("/normativa")}>NORMATIVA</li>
+            <li onClick={() => navigate("/equipo")}>EQUIPO</li>
+            <li onClick={() => navigate("/contacto")}>CONTACTO</li>
+            <li onClick={() => navigate("/encuesta-ingresantes-2025")}>ENCUESTA A INGRESANTES A 1° AÑO 2025</li>  
+          </ul>
+        </nav>
+      )}
 
       {/* Post Cards */}
       <main className="posts-container">

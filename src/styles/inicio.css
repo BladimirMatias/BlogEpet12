@@ -7,18 +7,29 @@ body {
   background-color: #f3f4f6;
 }
 
+.loaders-css {
+  display: block; /* Ensure the loader is treated as a block element */
+  margin: 0 auto; /* Center horizontally */
+  transform: scale(1.5); /* Increase the size of the loader */
+}
+
 .container {
   min-height: 100vh;
+  padding-top: 80px; /* Add padding to avoid content being hidden under the fixed header */
 }
 
 /* Header */
 .header {
-  background-color: #312e81;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 50px 16px;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  justify-content: space-between; /* Ensure proper spacing */
+  background-color: #118799;
+  padding: 26px;
+  position: fixed; /* Make the header fixed at the top */
+  top: 0;
+  left: 0;
+  width: 100%; /* Ensure it spans the full width */
+  z-index: 1000; /* Ensure it stays above other elements */
 }
 
 .menu-icon {
@@ -34,7 +45,7 @@ body {
 }
 
 .header-title {
-  font-size: 18px;
+  font-size: 28px;
   font-weight: bold;
   color: white;
   margin: 0;
@@ -47,8 +58,8 @@ body {
 }
 
 .logo {
-  height: 40px;
-  width: 40px;
+  height: 110px;
+  width: 11 0px;
   object-fit: contain;
 }
 
@@ -69,7 +80,7 @@ body {
   text-align: center;
   font-size: 14px;
   font-weight: 600;
-  color: #0d9488;
+  color: #118799;
   margin-bottom: 8px;
   text-transform: capitalize;
 }
@@ -87,8 +98,41 @@ body {
 
 /* Loading State */
 .loading-text {
-  text-align: center;
-  padding-top: 50px;
-  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+  font-size: 18px; /* Slightly larger text */
   color: #555;
+  margin: 0; /* Remove any margin that might push it */
+  text-align: center; /* Ensure text is centered */
+}
+
+/* Menu Styles */
+.menu {
+  position: absolute;
+  top: 100px; /* Below the header */
+  left: 0;
+  width: 200px;
+  background-color: #118799;
+  color: white;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 0 0 8px 8px;
+  z-index: 1000;
+}
+
+.menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  padding: 18px 16px;
+  cursor: pointer;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.menu li:hover {
+  background-color: rgba(255, 255, 255, 0.1);
 }

@@ -14,7 +14,7 @@
 /* Back Button */
 .back-button {
   align-self: flex-start;
-  background-color: #312e81;
+  background-color: #118799;
   color: white;
   border: none;
   border-radius: 8px;
@@ -25,7 +25,7 @@
 }
 
 .back-button:hover {
-  background-color: #4338ca;
+  background-color: #118799;
 }
 
 /* Post Title */

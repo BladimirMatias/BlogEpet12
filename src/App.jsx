@@ -1,7 +1,6 @@
-import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Inicio from "./screens/inicio";
-import PostDetalle from "./screens/PostDetalle";
+import Inicio from "./screen/inicio";
+import PostDetalle from "./screen/PostDetalle";
 
 export default function App() {
   return (

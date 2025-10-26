@@ -1,0 +1,40 @@
+.horarios-container {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #ffffff;
+  min-height: 100vh;
+}
+
+.horarios-title {
+  color: #0d9488; /* mismo color que el resto de tu app */
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+
+.horarios-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.horarios-links p {
+  font-size: 2rem;
+  color: #333;
+  margin: 15px 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.horario-img {
+  display: block;
+  margin: 0 auto 20px auto;
+  max-width: 320px;
+  width: 100%;
+}
+
+.horarios-links p:hover {
+  color: #0d9488;
+  transform: scale(1.05);
+}

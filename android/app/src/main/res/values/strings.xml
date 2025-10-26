@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">BlogEpet12App</string>
+    <string name="title_activity_main">BlogEpet12App</string>
+    <string name="package_name">com.epet12.app</string>
+    <string name="custom_url_scheme">com.epet12.app</string>
+</resources>

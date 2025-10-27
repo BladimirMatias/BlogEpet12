@@ -1,13 +1,32 @@
-# React + Vite
+# 🏫 Blog E.P.E.T. N° 12
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicación web desarrollada para la **E.P.E.T. N° 12**, con el objetivo de centralizar las **novedades, horarios, normativas y demás comunicaciones institucionales** de manera accesible y moderna.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Tecnologías utilizadas
 
-## Expanding the ESLint configuration
+- ⚛️ **React** — Librería principal para la interfaz de usuario.  
+- ⚡ **Vite** — Entorno de desarrollo rápido y moderno.  
+- 🧭 **React Router DOM** — Manejo de rutas entre pantallas.  
+- 🎨 **CSS** — Estilos personalizados para mantener una identidad visual institucional.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-# BlogEpet12
+---
+
+## 🧩 Estructura principal
+
+El proyecto cuenta con las siguientes secciones o “screens”:
+
+- 📰 **Novedades** → Página de inicio que muestra las publicaciones del blog.  
+- 🕒 **Horarios de clase** → Enlaces a los horarios según especialidad.  
+- 📚 **Normativa** → Acceso a reglamentos, leyes y resoluciones.  
+- 🧠 **Correlatividades, Programas, Clases de Consulta, Mesas de Examen, etc.**  
+  (En desarrollo o próximos a implementar.)
+
+---
+
+## ⚙️ Instalación y ejecución local
+
+1. Clonar el repositorio:
+   ```bash
+   git clone https://github.com/BladimirMatias/BlogEpet12.git

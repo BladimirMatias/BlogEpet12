@@ -5,6 +5,7 @@ import PostDetalle from "./screens/post-detalle";
 import HorariosDeClase from "./screens/horarios-de-clases";
 import Programas from "./screens/Programas";
 import Correlatividades from "./screens/Correlatividades";
+import MesasDeExamen from "./screens/mesas-de-examen";
 import Planillas from "./screens/planillas";
 import Normativa from "./screens/Normativa";
 import ParaAlumnos from "./screens/paraalumnos";
@@ -25,6 +26,7 @@ export default function App() {
           <Route path="/post/:id" element={<PostDetalle />} />
           <Route path="/programas" element={<Programas />} />
           <Route path="/correlatividades" element={<Correlatividades />} />
+          <Route path="/mesas-de-examen" element={<MesasDeExamen />} />
           <Route path="/planillas" element={<Planillas />} />
           <Route path="/normativa" element={<Normativa />} />
           <Route path="/paraprofesores" element={<ParaProfesores />} />
